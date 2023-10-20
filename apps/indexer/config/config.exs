@@ -22,7 +22,7 @@ config :logger, :indexer,
        block_number step count error_count shrunk import_id transaction_id)a,
   metadata_filter: [application: :indexer]
 
-topics = ["evm-txs", "internal-txs"]
+topics = ["evm-txs", "internal-txs", "token-transfers"]
 kafka_brokers = System.get_env("KAFKA_BROKERS")
 endpoints = case kafka_brokers do
   nil ->
