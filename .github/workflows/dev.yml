@@ -10,6 +10,8 @@ jobs:
       ingressEnabled: "yes"
       ingressHost: "blockscout.dev.astranet.services"
       replicas: "1"
+      kafkaCert: "true"
+      kafkaEnv: "dev"
       servicePort: "4000"
     secrets: inherit
   build-blockscout-worker:

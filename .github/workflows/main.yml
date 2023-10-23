@@ -10,6 +10,8 @@ jobs:
       ingressEnabled: "yes"
       ingressHost: "blockscout.prod.astranet.services"
       replicas: "2"
+      kafkaCert: "true"
+      kafkaEnv: "prod"
       servicePort: "4000"
     secrets: inherit
   build-blockscout-worker:
@@ -18,5 +20,5 @@ jobs:
       workloadName: blockscout-worker-prod
       replicas: "1"
       kafkaCert: "true"
-      kafkaEnv: "dev"
+      kafkaEnv: "prod"
     secrets: inherit
