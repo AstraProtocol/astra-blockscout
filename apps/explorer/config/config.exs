@@ -55,23 +55,23 @@ config :explorer, Explorer.Counters.AddressTokenUsdSum,
   enable_consolidation: true
 
 config :explorer, Explorer.Chain.Cache.ContractsCounter,
-  enabled: true,
-  enable_consolidation: true,
+  enabled: System.get_env("CACHE_ENABLE_CONTRACTS_COUNTER") == "true",
+  enable_consolidation: System.get_env("CACHE_ENABLE_CONTRACTS_COUNTER") == "true",
   update_interval_in_seconds: 30 * 60
 
 config :explorer, Explorer.Chain.Cache.NewContractsCounter,
-  enabled: true,
-  enable_consolidation: true,
+  enabled: System.get_env("CACHE_ENABLE_NEW_CONTRACTS_COUNTER") == "true",
+  enable_consolidation: System.get_env("CACHE_ENABLE_NEW_CONTRACTS_COUNTER") == "true",
   update_interval_in_seconds: 30 * 60
 
 config :explorer, Explorer.Chain.Cache.VerifiedContractsCounter,
-  enabled: true,
-  enable_consolidation: true,
+  enabled: System.get_env("CACHE_ENABLE_VERIFIED_CONTRACTS_COUNTER") == "true",
+  enable_consolidation: System.get_env("CACHE_ENABLE_VERIFIED_CONTRACTS_COUNTER") == "true",
   update_interval_in_seconds: 30 * 60
 
 config :explorer, Explorer.Chain.Cache.NewVerifiedContractsCounter,
-  enabled: true,
-  enable_consolidation: true,
+  enabled: System.get_env("CACHE_ENABLE_NEW_VERIFIED_CONTRACTS_COUNTER") == "true",
+  enable_consolidation: System.get_env("CACHE_ENABLE_NEW_VERIFIED_CONTRACTS_COUNTER") == "true",
   update_interval_in_seconds: 30 * 60
 
 config :explorer, Explorer.Chain.Cache.TokenExchangeRate,
