@@ -18,7 +18,10 @@ jobs:
     uses: AstraProtocol/github-actions-workflows/.github/workflows/stella-deployment.yml@main
     with:
       workloadName: blockscout-worker-dev
+      ingressEnabled: "yes"
+      ingressHost: "blockscout-worker.dev.astranet.services"
       replicas: "1"
       kafkaCert: "true"
       kafkaEnv: "dev"
+      servicePort: "4000"
     secrets: inherit
